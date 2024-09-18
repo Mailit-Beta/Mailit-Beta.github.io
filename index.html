@@ -1,3 +1,57 @@
-<html>
-  <h1>hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background with Button</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+        }
+
+        #container {
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #mailit {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            z-index: 1;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(30, 144, 255, 0.7);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            box-shadow: 0 0 40px rgba(30, 144, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="mailit">MailIt</div>
+        <button class="button">Download</button>
+    </div>
+</body>
 </html>
