@@ -27,7 +27,7 @@
             left: 0;
             width: 100%;
             z-index: 1;
-            box-sizing: border-box; /* Ensures padding is included in width */
+            box-sizing: border-box; /* Ensure padding is included in width */
         }
 
         #mailit {
@@ -63,7 +63,13 @@
             position: absolute;
             width: 100px; /* Adjust width as needed */
             height: auto; /* Maintain aspect ratio */
+            left: 200px; /* Position 200 pixels from the left */
             bottom: 20px; /* Position from the bottom */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        #image:hover {
+            transform: scale(1.25); /* Grow by 25% on hover */
         }
     </style>
 </head>
@@ -73,7 +79,7 @@
         <button class="button">Download</button>
     </div>
     <div id="container">
-        <img id="Mail.png" src="Mail.png" alt="Description of image">
+        <img id="image" src="Mail.png" alt="Description of image">
     </div>
 </body>
 </html>
