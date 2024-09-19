@@ -44,9 +44,14 @@
         }
 
         #image {
-            width: 350px; /* Increased image width by 200px (from 150px to 350px) */
+            width: 350px; /* Increased image width */
             height: auto; /* Maintain aspect ratio */
             margin-right: 45px; /* Space between image and description */
+            transition: transform 0.3s; /* Smooth transition for growth effect */
+        }
+
+        #image:hover {
+            transform: scale(1.03); /* Grow the image by 3% */
         }
 
         button, #signup-button {
@@ -66,11 +71,11 @@
         }
 
         #email-input {
-            width: 200px; /* Width of the input */
+            width: 300px; /* Increased width of the input */
             padding: 10px; /* Padding for the input */
             border: none; /* No border */
             border-radius: 5px; /* Rounded corners */
-            margin-left: 10px; /* Space between button and input */
+            margin-right: 10px; /* Space between input and button */
             font-size: 18px; /* Increased font size for input */
         }
 
@@ -83,7 +88,7 @@
         #description {
             margin-bottom: 20px; /* Space below the description */
             text-align: left; /* Align text to the left */
-            max-width: 300px; /* Limit width of the description */
+            max-width: 500px; /* Increased max width of the description */
             font-size: 28px; /* Increased font size by 10px */
             margin-right: 100px; /* Increased right margin */
         }
@@ -103,8 +108,8 @@
                 Sign up for email updates below to get early access to new betas!
             </div>
             <div id="input-container">
-                <button id="signup-button">Sign Up</button>
                 <input type="email" id="email-input" placeholder="Enter your email" required>
+                <button id="signup-button">Sign Up</button>
             </div>
         </div>
     </div>
