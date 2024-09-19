@@ -9,47 +9,71 @@
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background: linear-gradient(135deg, #6a11cb, #ff8e00, #ffd200);
             color: white;
             position: relative;
+            overflow: hidden; /* Hide overflow */
+        }
+
+        #top-bar {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed; /* Fixed position for the top bar */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            box-sizing: border-box; /* Ensures padding is included in width */
         }
 
         #mailit {
-            position: absolute;
-            top: 20px;
-            left: 20px;
             font-size: 24px;
-            z-index: 1;
         }
 
         #container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            height: calc(100% - 50px); /* Adjust for the height of the top bar */
+            margin-top: 50px; /* Add margin for the fixed top bar */
+            position: relative; /* Allows positioning of the image */
         }
 
         .button {
-            padding: 15px 30px;
-            font-size: 20px;
+            padding: 10px 20px; /* Adjusted padding for better fit */
+            font-size: 18px; /* Font size */
             color: white;
-            background-color: #1e90ff;
+            background-color: red; /* Red background */
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            box-shadow: 0 0 20px rgba(30, 144, 255, 0.7);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
             transition: box-shadow 0.3s ease;
         }
 
         .button:hover {
-            box-shadow: 0 0 40px rgba(30, 144, 255, 1);
+            box-shadow: 0 0 40px rgba(255, 0, 0, 1);
+        }
+
+        #image {
+            position: absolute;
+            width: 100px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            bottom: 20px; /* Position from the bottom */
         }
     </style>
 </head>
 <body>
-    <div id="mailit">MailIt</div>
-    <div id="container">
+    <div id="top-bar">
+        <div id="mailit">MailIt</div>
         <button class="button">Download</button>
+    </div>
+    <div id="container">
+        <img id="Mail.png" src="your-image-url.jpg" alt="Description of image">
     </div>
 </body>
 </html>
